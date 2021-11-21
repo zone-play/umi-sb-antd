@@ -32,5 +32,5 @@ Button.args = {
   // href: '', //string
   // target: '_blank', //string
   label: '按钮',
-  // onClick: () => void
+  onClick: () => alert('触发了'),
 };
