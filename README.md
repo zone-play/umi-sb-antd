@@ -43,6 +43,6 @@ yarn add antd
 import 'antd/dist/antd.css';
 ```
 
-
+> [文档 docs](https://github.com/zone-play/umi-sb-antd/wiki/1.-%E6%A6%82%E8%A7%88#%E6%96%87%E6%A1%A3%E4%BB%8B%E7%BB%8D)
 
 
