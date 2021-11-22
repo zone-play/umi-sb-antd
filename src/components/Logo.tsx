@@ -24,7 +24,7 @@ export const LogoComponent = ({
       gap={gap}
       shape={shape}
       size={size}
-      src={<Image src={src} preview={preview} />}
+      src={<Image alt={alt} src={src} preview={preview} />}
     />
   );
 };
