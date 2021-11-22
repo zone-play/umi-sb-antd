@@ -1,17 +1,55 @@
-import React from 'react';
-import { Layout, Affix } from 'antd';
-const { Header, Footer, Content } = Layout;
+import { Row, Col, Affix } from 'antd';
 
-function LayoutComponent() {
+export const Layout_Desk_Component = () => {
   return (
-    <Layout>
+    <>
       <Affix>
-        <Header>Header</Header>
+        <Row>
+          <Col>Header</Col>
+        </Row>
       </Affix>
-      <Content>Content</Content>
-      <Footer>Footer</Footer>
-    </Layout>
+      <Row>
+        <Col>Desk</Col>
+      </Row>
+      <Row>
+        <Col>Footer</Col>
+      </Row>
+    </>
   );
-}
+};
 
-export default LayoutComponent;
+export const Layout_Table_Component = () => {
+  return (
+    <>
+      <Affix>
+        <Row>
+          <Col>Header</Col>
+        </Row>
+      </Affix>
+      <Row>
+        <Col>Table</Col>
+      </Row>
+      <Row>
+        <Col>Footer</Col>
+      </Row>
+    </>
+  );
+};
+
+export const Layout_Mobile_Component = () => {
+  return (
+    <>
+      <Affix>
+        <Row>
+          <Col>Header</Col>
+        </Row>
+      </Affix>
+      <Row>
+        <Col>Mobile</Col>
+      </Row>
+      <Row>
+        <Col>Footer</Col>
+      </Row>
+    </>
+  );
+};

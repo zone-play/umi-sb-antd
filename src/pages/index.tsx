@@ -1,20 +1,32 @@
-import styles from './index.less';
-import { ButtonComponent } from '../components/Button';
-import { GithubOutlined } from '@ant-design/icons';
+import { createMedia } from '@artsy/fresnel';
+import {
+  Layout_Desk_Component,
+  Layout_Table_Component,
+  Layout_Mobile_Component,
+} from '../layouts/index';
+
+const { MediaContextProvider, Media } = createMedia({
+  // breakpoints values can be either strings or integers
+  breakpoints: {
+    sm: 0,
+    md: 768,
+    lg: 1024,
+    xl: 1192,
+  },
+});
 
 export default function IndexPage() {
-  const button_type = 'primary';
-  const button_label = 'hello world';
-
   return (
-    <div>
-      <h1 className={styles.title}>Page index</h1>
-      <br />
-      <ButtonComponent
-        type={button_type}
-        label={button_label}
-        icon={<GithubOutlined />}
-      />
-    </div>
+    <MediaContextProvider>
+      <Media greaterThanOrEqual="lg">
+        <Layout_Desk_Component />
+      </Media>
+      <Media at="md">
+        <Layout_Table_Component />
+      </Media>
+      <Media at="sm">
+        <Layout_Mobile_Component />
+      </Media>
+    </MediaContextProvider>
   );
 }
