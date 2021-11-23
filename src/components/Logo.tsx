@@ -6,7 +6,7 @@ interface LogoProps {
   gap?: number; //4 字符类型距离左右两侧边界单位像素
   shape?: 'circle' | 'square'; //'circle' | 'square'
   size?: object;
-  src?: string; // require('../../../public/img/logo.jpg');
+  src?: string; // require('../../../public/img/logo.png');
   preview?: boolean;
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image } from 'antd';
-import logo from '../../public/img/logo.jpg';
+import logo from '../../public/img/logo.png';
 
 export default () => {
   return (
