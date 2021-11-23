@@ -15,7 +15,11 @@ interface MenuProps {
 
 export const MenuComponent = ({ menuItem, ...props }: MenuProps) => {
   const renderMenuItem = menuItem.map((item) => {
-    return <Menu.Item key={item.id}>{item.label}</Menu.Item>;
+    return (
+      <Menu.Item key={item.id}>
+        <h3>{item.label.toUpperCase()}</h3>
+      </Menu.Item>
+    );
   });
 
   return (
