@@ -8,13 +8,9 @@ export default {
 };
 
 const Template: ComponentStory<typeof LogoComponent> = (args) => (
-  <LogoComponent {...args} />
+  <LogoComponent />
 );
 
 export const Logo = Template.bind({});
 
-Logo.args = {
-  alt: 'TESLA', //图像无法显示时的替代文本
-  gap: 4, //字符类型距离左右两侧边界单位像素
-  shape: 'square', //circle | square
-};
+Logo.args = {};
