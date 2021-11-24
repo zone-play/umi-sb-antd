@@ -7,4 +7,10 @@ export default {
   component: HeaderComponent,
 };
 
-export const Header = () => <HeaderComponent />;
+const Template: ComponentStory<typeof HeaderComponent> = (args) => (
+  <HeaderComponent />
+);
+
+export const Header = Template.bind({});
+
+Header.args = {};
