@@ -23,7 +23,7 @@ export const LogoComponent = ({
       alt={alt}
       gap={gap}
       shape={shape}
-      size={{ xs: 32, sm: 40, md: 80, lg: 100, xl: 114, xxl: 128 }}
+      size={{ xs: 68, sm: 78, md: 88, lg: 98, xl: 108, xxl: 118 }}
       src={
         <Image
           alt={alt}
