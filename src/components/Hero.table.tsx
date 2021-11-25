@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Image, Avatar } from 'antd';
 import { ButtonComponent } from './Button';
 
-export const AdvertiseTableComponent = () => {
+export const HeroTableComponent = () => {
   const adStr = (
     <h1
       style={{

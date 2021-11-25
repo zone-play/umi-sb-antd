@@ -1,18 +1,14 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { Row, Col, Image, Avatar } from 'antd';
 import { ButtonComponent } from './Button';
 
-export const AdvertiseMobileComponent = () => {
+interface ComponentProps {
+  style?: CSSProperties;
+}
+
+export const HeroComponent = ({ style }: ComponentProps) => {
   const adStr = (
-    <h1
-      style={{
-        fontWeight: 700,
-        fontSize: 22,
-        marginBottom: 10,
-        textAlign: 'center',
-        width: '80%',
-      }}
-    >
+    <h1 style={{ fontWeight: 800, fontSize: 32, marginBottom: 26 }}>
       AN EVEN BETTER LOOK OF TECHNOLOGY FOR ALL!
     </h1>
   );
@@ -22,21 +18,14 @@ export const AdvertiseMobileComponent = () => {
       justify="center"
       style={{ background: 'rgb(171, 217, 243)' }}
     >
-      <Col md={24} style={{ display: 'flex', justifyContent: 'center' }}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            paddingTop: 24,
-          }}
-        >
+      <Col lg={12} style={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <div style={{ display: 'inline', width: '50%' }}>
           {adStr}
           <ButtonComponent
             style={{
-              maxWidth: 140,
+              maxWidth: 180,
               color: '#000',
-              borderWidth: 1,
+              borderWidth: 2,
               borderColor: '#000',
             }}
             type="default"
@@ -48,7 +37,7 @@ export const AdvertiseMobileComponent = () => {
           />
         </div>
       </Col>
-      <Col md={24} style={{ display: 'flex', justifyContent: 'center' }}>
+      <Col lg={12} style={{ display: 'flex', justifyContent: 'flex-start' }}>
         <Image
           alt="hero"
           src={require('../../public/img/Hero-Image-Home-2.jpg')}
