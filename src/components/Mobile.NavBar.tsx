@@ -49,7 +49,7 @@ export const MobileNavBarComponent = () => {
         backArrow={false}
         left={<LogoComponent />}
         right={renderRight}
-        style={{ background: 'white' }}
+        style={{ background: 'white', padding: 0 }}
       />
       {renderPopup}
     </>

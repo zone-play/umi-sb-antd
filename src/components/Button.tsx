@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
-
 interface ButtonProps {
+  style?: object;
   type?: 'primary' | 'ghost' | 'dashed' | 'link' | 'text' | 'default';
   shape?: 'circle' | 'round' | 'default';
   size?: 'large' | 'middle' | 'small';
