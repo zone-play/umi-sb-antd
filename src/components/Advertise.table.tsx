@@ -20,7 +20,7 @@ export const AdvertiseTableComponent = () => {
     <Row
       align="middle"
       justify="center"
-      style={{ background: 'rgb(171, 217, 243)', marginTop: 88 }}
+      style={{ background: 'rgb(171, 217, 243)' }}
     >
       <Col md={24} style={{ display: 'flex', justifyContent: 'center' }}>
         <div

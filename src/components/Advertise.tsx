@@ -16,7 +16,7 @@ export const AdvertiseComponent = ({ style }: ComponentProps) => {
     <Row
       align="middle"
       justify="center"
-      style={{ background: 'rgb(171, 217, 243)', marginTop: 108 }}
+      style={{ background: 'rgb(171, 217, 243)' }}
     >
       <Col lg={12} style={{ display: 'flex', justifyContent: 'flex-end' }}>
         <div style={{ display: 'inline', width: '50%' }}>
