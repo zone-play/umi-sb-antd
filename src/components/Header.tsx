@@ -28,7 +28,7 @@ export const HeaderComponent = () => {
     <div
       style={{
         display: 'block',
-        position: 'fixed',
+        // position: 'fixed',
         top: 0,
         zIndex: 1,
         width: '100%',
@@ -66,14 +66,20 @@ export const HeaderComponent = () => {
         </Col>
       </Row>
       {visibleM ? (
-        <Row align="middle">
+        <Row
+          align="middle"
+          style={{ position: 'absolute', zIndex: 1, width: '100%' }}
+        >
           <Col span={24}>
             <MenuSubComponent />
           </Col>
         </Row>
       ) : null}
       {visibleS ? (
-        <Row align="middle">
+        <Row
+          align="middle"
+          style={{ position: 'absolute', zIndex: 1, width: '100%' }}
+        >
           <Col span={24}>
             <SearchComponent />
           </Col>

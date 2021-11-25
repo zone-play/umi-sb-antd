@@ -26,21 +26,13 @@ export const IndexPageComponent = () => {
       <Media greaterThanOrEqual="lg">
         <Layout_Desk_Component
           header={<HeaderComponent />}
-          content={
-            <div style={{ marginTop: 108 }}>
-              <AdvertiseComponent />
-            </div>
-          }
+          content={<AdvertiseComponent />}
         />
       </Media>
       <Media at="md">
         <Layout_Table_Component
           header={<HeaderComponent />}
-          content={
-            <div style={{ marginTop: 88 }}>
-              <AdvertiseTableComponent />
-            </div>
-          }
+          content={<AdvertiseTableComponent />}
         />
       </Media>
       <Media at="sm">
