@@ -1,4 +1,6 @@
 import { AdvertiseComponent } from '../components/Advertise';
+import { AdvertiseTableComponent } from '../components/Advertise.table';
+import { AdvertiseMobileComponent } from '../components/Advertise.mobile';
 import { HeaderComponent } from '../components/Header';
 import { MobileNavBarComponent } from '../components/Mobile.NavBar';
 import { createMedia } from '@artsy/fresnel';
@@ -30,13 +32,13 @@ export const IndexPageComponent = () => {
       <Media at="md">
         <Layout_Table_Component
           header={<HeaderComponent />}
-          content={<AdvertiseComponent />}
+          content={<AdvertiseTableComponent />}
         />
       </Media>
       <Media at="sm">
         <Layout_Mobile_Component
           header={<MobileNavBarComponent />}
-          content={<AdvertiseComponent />}
+          content={<AdvertiseMobileComponent />}
         />
       </Media>
     </MediaContextProvider>

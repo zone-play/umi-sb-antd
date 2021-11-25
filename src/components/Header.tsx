@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col, Affix } from 'antd';
 import { MenuComponent } from './Menu';
 import { MenuSubComponent } from './MenuSub';
 import { LogoComponent } from './Logo';
@@ -25,7 +25,15 @@ export const HeaderComponent = () => {
   }
 
   return (
-    <>
+    <div
+      style={{
+        display: 'block',
+        position: 'fixed',
+        top: 0,
+        zIndex: 1,
+        width: '100%',
+      }}
+    >
       <Row align="middle" style={styles.container}>
         <Col span={4} offset={1}>
           <LogoComponent />
@@ -71,7 +79,7 @@ export const HeaderComponent = () => {
           </Col>
         </Row>
       ) : null}
-    </>
+    </div>
   );
 };
 
