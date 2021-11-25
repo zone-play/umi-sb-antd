@@ -1,57 +1,80 @@
 import React, { useState } from 'react';
-import { NavBar, Space, Toast, Popup, Button } from 'antd-mobile';
-import { SearchOutline, MoreOutline, CloseOutline } from 'antd-mobile-icons';
 import { LogoComponent } from './Logo';
 import { SearchComponent } from './Search';
-import { Affix } from 'antd';
+import { Affix, Col, Drawer, PageHeader, Row } from 'antd';
+import { MenuOutlined, SearchOutlined } from '@ant-design/icons';
+import { MenuComponent } from './Menu';
 
 export const MobileNavBarComponent = () => {
-  const [visible1, setVisible1] = useState(false);
+  const [visible, setVisible] = useState(false);
 
-  const renderRight = (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-around',
-        fontWeight: 'bold',
-      }}
+  const showDrawer = () => {
+    setVisible(true);
+  };
+
+  const onClose = () => {
+    setVisible(false);
+  };
+
+  const renderDrawer = (
+    <Drawer
+      title="Basic Drawer"
+      placement="left"
+      closable={false}
+      onClose={onClose}
+      visible={visible}
+      key="left"
     >
-      <SearchOutline fontSize={22} />
-      <MoreOutline
-        onClick={() => {
-          setVisible1(true);
-        }}
-        fontSize={22}
-      />
-    </div>
-  );
-
-  const renderPopup = (
-    <Popup visible={visible1} position="left" bodyStyle={{ minWidth: '100vw' }}>
-      <NavBar
-        backArrow={false}
-        left={<LogoComponent />}
-        right={
-          <CloseOutline
-            onClick={() => {
-              setVisible1(false);
-            }}
-            fontSize={22}
-          />
-        }
-      />
-    </Popup>
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+    </Drawer>
   );
 
   return (
     <>
-      <NavBar
-        backArrow={false}
-        left={<LogoComponent />}
-        right={renderRight}
-        style={{ background: 'white', padding: 0 }}
-      />
-      {renderPopup}
+      <div style={styles.container}>
+        <div style={styles.sub}>
+          <a style={styles.link1}>
+            <LogoComponent />
+          </a>
+        </div>
+        <div style={styles.sub}>
+          <a style={styles.link2}>
+            <SearchOutlined />
+          </a>
+          <a onClick={showDrawer} style={styles.link2}>
+            <MenuOutlined />
+          </a>
+        </div>
+      </div>
+      {renderDrawer}
     </>
   );
+};
+
+const styles = {
+  container: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    background: 'white',
+    paddingLeft: 12,
+    paddingRight: 12,
+  },
+  sub: {
+    display: 'inline-flex',
+    alignItems: 'center',
+  },
+  link1: {
+    display: 'inline-flex',
+    color: 'inherit',
+  },
+  link2: {
+    display: 'inline-flex',
+    color: 'inherit',
+    marginLeft: 14,
+    fontWeight: 'bold',
+    fontSize: 22,
+    alignSelf: 'center',
+  },
 };

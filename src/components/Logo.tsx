@@ -8,6 +8,7 @@ interface LogoProps {
   size?: object;
   src?: string; // require('../../public/img/logo.png');
   preview?: boolean;
+  style?: object;
 }
 
 export const LogoComponent = ({
@@ -17,6 +18,7 @@ export const LogoComponent = ({
   size,
   src,
   preview,
+  style,
 }: LogoProps) => {
   return (
     <Avatar
@@ -24,6 +26,7 @@ export const LogoComponent = ({
       gap={gap}
       shape={shape}
       size={{ xs: 68, sm: 78, md: 88, lg: 98, xl: 108, xxl: 118 }}
+      style={{}}
       src={
         <Image
           alt={alt}
