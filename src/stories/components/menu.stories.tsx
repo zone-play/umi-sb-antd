@@ -8,7 +8,17 @@ export default {
 };
 
 const Template: ComponentStory<typeof MenuComponent> = (args) => (
-  <MenuComponent />
+  <MenuComponent {...args} />
 );
 
 export const Menu = Template.bind({});
+
+Menu.args = {
+  menuItem: [
+    { id: 'tv', label: 'TVs' },
+    { id: 'home', label: 'Home Appliances' },
+    { id: 'conditioning', label: 'Air Conditioning' },
+    { id: 'monitors', label: 'Monitors' },
+    { id: 'purifiers', label: 'Air purifiers' },
+  ],
+};
