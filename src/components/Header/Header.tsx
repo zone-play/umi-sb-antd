@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import { Row, Col, Affix } from 'antd';
-import { MenuComponent } from '../Menu';
-import { MenuSubComponent } from '../MenuSub';
+import { Row, Col } from 'antd';
 import { LogoComponent } from '../Logo';
 import { CloseOutlined, MenuOutlined, SearchOutlined } from '@ant-design/icons';
 import { SearchComponent } from '../Search';
+import { ReactNode } from '@umijs/renderer-react/node_modules/@types/react';
 
-export const Header = () => {
+interface ComponentProps {
+  menu?: ReactNode;
+  menuSub?: ReactNode;
+}
+
+export const Header = ({ menu, menuSub }: ComponentProps) => {
   const [visibleM, setVisibleM] = useState(false);
   const [visibleS, setVisibleS] = useState(false);
 
@@ -38,9 +42,7 @@ export const Header = () => {
         <Col span={4} offset={1}>
           <LogoComponent />
         </Col>
-        <Col span={14}>
-          <MenuComponent />
-        </Col>
+        <Col span={14}>{menu}</Col>
         <Col span={4} pull={0.2}>
           <Row align="middle" style={{ textAlign: 'center' }}>
             <Col span={12}></Col>
@@ -70,9 +72,7 @@ export const Header = () => {
           align="middle"
           style={{ position: 'absolute', zIndex: 1, width: '100%' }}
         >
-          <Col span={24}>
-            <MenuSubComponent />
-          </Col>
+          <Col span={24}>{menuSub}</Col>
         </Row>
       ) : null}
       {visibleS ? (
