@@ -6,15 +6,11 @@ import { SearchComponent } from '../Search';
 import { Header } from './Header';
 import { NavBarComponent } from './NavBar';
 
-export const HeaderComponent = () => {
-  const menuItem = [
-    { id: 'tv', label: 'TVs' },
-    { id: 'home', label: 'Home Appliances' },
-    { id: 'conditioning', label: 'Air Conditioning' },
-    { id: 'monitors', label: 'Monitors' },
-    { id: 'purifiers', label: 'Air purifiers' },
-  ];
+interface ComponentProps {
+  menuItem?: any[];
+}
 
+export const HeaderComponent = ({ menuItem }: ComponentProps) => {
   return (
     <>
       <Media at="lg">

@@ -8,9 +8,17 @@ export default {
 };
 
 const Template: ComponentStory<typeof HeaderComponent> = (args) => (
-  <HeaderComponent />
+  <HeaderComponent {...args} />
 );
 
 export const Header = Template.bind({});
 
-Header.args = {};
+Header.args = {
+  menuItem: [
+    { id: 'tv', label: 'TVs' },
+    { id: 'home', label: 'Home Appliances' },
+    { id: 'conditioning', label: 'Air Conditioning' },
+    { id: 'monitors', label: 'Monitors' },
+    { id: 'purifiers', label: 'Air purifiers' },
+  ],
+};

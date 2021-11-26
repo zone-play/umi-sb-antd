@@ -8,7 +8,13 @@ export default {
 };
 
 const Template: ComponentStory<typeof HeroComponent> = (args) => (
-  <HeroComponent />
+  <HeroComponent {...args} />
 );
 
 export const Hero = Template.bind({});
+
+Hero.args = {
+  title: 'AN EVEN BETTER LOOK OF TECHNOLOGY FOR ALL!',
+  src: require('../../../public/img/Hero-Image-Home-2.jpg'),
+  label: 'About Us',
+};
