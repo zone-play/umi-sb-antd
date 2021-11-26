@@ -1,12 +1,12 @@
 import React, { CSSProperties } from 'react';
 import { Row, Col, Image, Avatar } from 'antd';
-import { ButtonComponent } from './Button';
+import { ButtonComponent } from '../Button';
 
 interface ComponentProps {
   style?: CSSProperties;
 }
 
-export const HeroComponent = ({ style }: ComponentProps) => {
+export const HeroDeskComponent = ({ style }: ComponentProps) => {
   const adStr = (
     <h1 style={{ fontWeight: 800, fontSize: 32, marginBottom: 26 }}>
       AN EVEN BETTER LOOK OF TECHNOLOGY FOR ALL!
@@ -40,7 +40,7 @@ export const HeroComponent = ({ style }: ComponentProps) => {
       <Col lg={12} style={{ display: 'flex', justifyContent: 'flex-start' }}>
         <Image
           alt="hero"
-          src={require('../../public/img/Hero-Image-Home-2.jpg')}
+          src={require('../../../public/img/Hero-Image-Home-2.jpg')}
           preview={false}
         />
       </Col>

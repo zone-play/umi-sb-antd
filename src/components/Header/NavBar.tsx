@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { LogoComponent } from './Logo';
-import { SearchComponent } from './Search';
-import { Affix, Col, Drawer, PageHeader, Row } from 'antd';
+import { LogoComponent } from '../Logo';
+import { SearchComponent } from '../Search';
+import { Drawer } from 'antd';
 import { MenuOutlined, SearchOutlined } from '@ant-design/icons';
-import { MenuComponent } from './Menu';
 
-export const MobileNavBarComponent = () => {
+export const NavBarComponent = () => {
   const [visible, setVisible] = useState(false);
 
   const showDrawer = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroComponent } from '../../components/Hero';
+import { HeroComponent } from '../../components/Hero/index';
 import { ComponentStory } from '@storybook/react';
 
 export default {

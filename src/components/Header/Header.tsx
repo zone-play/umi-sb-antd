@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Row, Col, Affix } from 'antd';
-import { MenuComponent } from './Menu';
-import { MenuSubComponent } from './MenuSub';
-import { LogoComponent } from './Logo';
+import { MenuComponent } from '../Menu';
+import { MenuSubComponent } from '../MenuSub';
+import { LogoComponent } from '../Logo';
 import { CloseOutlined, MenuOutlined, SearchOutlined } from '@ant-design/icons';
-import { SearchComponent } from './Search';
+import { SearchComponent } from '../Search';
 
-export const HeaderComponent = () => {
+export const Header = () => {
   const [visibleM, setVisibleM] = useState(false);
   const [visibleS, setVisibleS] = useState(false);
 

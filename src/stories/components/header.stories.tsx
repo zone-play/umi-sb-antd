@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderComponent } from '../../components/Header';
+import { HeaderComponent } from '../../components/Header/index';
 import { ComponentStory } from '@storybook/react';
 
 export default {

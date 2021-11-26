@@ -1,5 +1,6 @@
 import { Row, Col, Affix } from 'antd';
 import { ReactNode } from 'react';
+import { MediaContextProvider } from '../media';
 
 interface ComponentProps {
   header?: ReactNode;
@@ -7,16 +8,16 @@ interface ComponentProps {
   footer?: ReactNode;
 }
 
-const DefaultLayout = ({ header, content, footer }: ComponentProps) => {
+export const LayoutComponent = ({
+  header,
+  content,
+  footer,
+}: ComponentProps) => {
   return (
-    <>
+    <MediaContextProvider>
       {header}
       {content}
       {footer}
-    </>
+    </MediaContextProvider>
   );
 };
-
-export const Layout_Desk_Component = DefaultLayout.bind({});
-export const Layout_Table_Component = DefaultLayout.bind({});
-export const Layout_Mobile_Component = DefaultLayout.bind({});

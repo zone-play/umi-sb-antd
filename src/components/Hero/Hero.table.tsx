@@ -1,14 +1,14 @@
 import React from 'react';
 import { Row, Col, Image, Avatar } from 'antd';
-import { ButtonComponent } from './Button';
+import { ButtonComponent } from '../Button';
 
-export const HeroMobileComponent = () => {
+export const HeroTableComponent = () => {
   const adStr = (
     <h1
       style={{
         fontWeight: 700,
-        fontSize: 22,
-        marginBottom: 10,
+        fontSize: 28,
+        marginBottom: 20,
         textAlign: 'center',
         width: '80%',
       }}
@@ -34,9 +34,9 @@ export const HeroMobileComponent = () => {
           {adStr}
           <ButtonComponent
             style={{
-              maxWidth: 140,
+              maxWidth: 160,
               color: '#000',
-              borderWidth: 1,
+              borderWidth: 2,
               borderColor: '#000',
             }}
             type="default"
@@ -51,7 +51,7 @@ export const HeroMobileComponent = () => {
       <Col md={24} style={{ display: 'flex', justifyContent: 'center' }}>
         <Image
           alt="hero"
-          src={require('../../public/img/Hero-Image-Home-2.jpg')}
+          src={require('../../../public/img/Hero-Image-Home-2.jpg')}
           preview={false}
         />
       </Col>
