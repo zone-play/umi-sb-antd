@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { Row, Col } from 'antd';
 import { LogoComponent } from '../Logo';
 import { CloseOutlined, MenuOutlined, SearchOutlined } from '@ant-design/icons';
-import { SearchComponent } from '../Search';
 import { ReactNode } from '@umijs/renderer-react/node_modules/@types/react';
 
 interface ComponentProps {
   menu?: ReactNode;
   menuSub?: ReactNode;
+  search?: ReactNode;
 }
 
-export const Header = ({ menu, menuSub }: ComponentProps) => {
+export const Header = ({ menu, menuSub, search }: ComponentProps) => {
   const [visibleM, setVisibleM] = useState(false);
   const [visibleS, setVisibleS] = useState(false);
 
@@ -80,9 +80,7 @@ export const Header = ({ menu, menuSub }: ComponentProps) => {
           align="middle"
           style={{ position: 'absolute', zIndex: 1, width: '100%' }}
         >
-          <Col span={24}>
-            <SearchComponent />
-          </Col>
+          <Col span={24}>{search}</Col>
         </Row>
       ) : null}
     </div>

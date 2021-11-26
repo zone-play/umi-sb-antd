@@ -2,6 +2,7 @@ import React from 'react';
 import { Media } from '../../media';
 import { MenuComponent } from '../Menu';
 import { MenuSubComponent } from '../MenuSub';
+import { SearchComponent } from '../Search';
 import { Header } from './Header';
 import { NavBarComponent } from './NavBar';
 
@@ -20,12 +21,14 @@ export const HeaderComponent = () => {
         <Header
           menu={<MenuComponent menuItem={menuItem} />}
           menuSub={<MenuSubComponent />}
+          search={<SearchComponent />}
         />
       </Media>
       <Media at="md">
         <Header
           menu={<MenuComponent menuItem={menuItem} />}
           menuSub={<MenuSubComponent />}
+          search={<SearchComponent />}
         />
       </Media>
       <Media at="sm">
