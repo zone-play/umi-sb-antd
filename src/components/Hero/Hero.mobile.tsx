@@ -1,8 +1,14 @@
-import React from 'react';
-import { Row, Col, Image, Avatar } from 'antd';
+import React, { CSSProperties } from 'react';
+import { Row, Col, Image } from 'antd';
 import { ButtonComponent } from '../Button';
+interface ComponentProps {
+  style?: CSSProperties;
+  title?: string;
+  src?: string;
+  label?: string;
+}
 
-export const HeroMobileComponent = () => {
+export const HeroMobileComponent = ({ title, src, label }: ComponentProps) => {
   const adStr = (
     <h1
       style={{
@@ -13,7 +19,7 @@ export const HeroMobileComponent = () => {
         width: '80%',
       }}
     >
-      AN EVEN BETTER LOOK OF TECHNOLOGY FOR ALL!
+      {title}
     </h1>
   );
   return (
@@ -44,16 +50,12 @@ export const HeroMobileComponent = () => {
             size="large"
             ghost={true}
             href=""
-            label="About Us"
+            label={label}
           />
         </div>
       </Col>
       <Col md={24} style={{ display: 'flex', justifyContent: 'center' }}>
-        <Image
-          alt="hero"
-          src={require('../../../public/img/Hero-Image-Home-2.jpg')}
-          preview={false}
-        />
+        <Image alt="hero" src={src} preview={false} />
       </Col>
     </Row>
   );

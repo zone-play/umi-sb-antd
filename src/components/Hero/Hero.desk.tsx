@@ -1,16 +1,21 @@
 import React, { CSSProperties } from 'react';
-import { Row, Col, Image, Avatar } from 'antd';
+import { Row, Col, Image } from 'antd';
 import { ButtonComponent } from '../Button';
-
 interface ComponentProps {
   style?: CSSProperties;
+  title?: string;
+  src?: string;
+  label?: string;
 }
 
-export const HeroDeskComponent = ({ style }: ComponentProps) => {
+export const HeroDeskComponent = ({
+  style,
+  title,
+  src,
+  label,
+}: ComponentProps) => {
   const adStr = (
-    <h1 style={{ fontWeight: 800, fontSize: 32, marginBottom: 26 }}>
-      AN EVEN BETTER LOOK OF TECHNOLOGY FOR ALL!
-    </h1>
+    <h1 style={{ fontWeight: 800, fontSize: 32, marginBottom: 26 }}>{title}</h1>
   );
   return (
     <Row
@@ -33,16 +38,12 @@ export const HeroDeskComponent = ({ style }: ComponentProps) => {
             size="large"
             ghost={true}
             href=""
-            label="About Us"
+            label={label}
           />
         </div>
       </Col>
       <Col lg={12} style={{ display: 'flex', justifyContent: 'flex-start' }}>
-        <Image
-          alt="hero"
-          src={require('../../../public/img/Hero-Image-Home-2.jpg')}
-          preview={false}
-        />
+        <Image alt="hero" src={src} preview={false} />
       </Col>
     </Row>
   );
