@@ -8,19 +8,40 @@ interface ComponentProps {
   title?: string;
   src?: string;
   label?: string;
+  onClick?: () => void;
 }
 
-export const HeroComponent = ({ title, src, label }: ComponentProps) => {
+export const HeroComponent = ({
+  title,
+  src,
+  label,
+  onClick,
+}: ComponentProps) => {
   return (
     <>
       <Media at="lg">
-        <HeroDeskComponent title={title} src={src} label={label} />
+        <HeroDeskComponent
+          title={title}
+          src={src}
+          label={label}
+          onClick={onClick}
+        />
       </Media>
       <Media at="md">
-        <HeroTableComponent title={title} src={src} label={label} />
+        <HeroTableComponent
+          title={title}
+          src={src}
+          label={label}
+          onClick={onClick}
+        />
       </Media>
       <Media at="sm">
-        <HeroMobileComponent title={title} src={src} label={label} />
+        <HeroMobileComponent
+          title={title}
+          src={src}
+          label={label}
+          onClick={onClick}
+        />
       </Media>
     </>
   );

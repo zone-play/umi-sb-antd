@@ -6,6 +6,7 @@ interface ComponentProps {
   title?: string;
   src?: string;
   label?: string;
+  onClick?: () => void;
 }
 
 export const HeroDeskComponent = ({
@@ -13,6 +14,7 @@ export const HeroDeskComponent = ({
   title,
   src,
   label,
+  onClick,
 }: ComponentProps) => {
   const adStr = (
     <h1 style={{ fontWeight: 800, fontSize: 32, marginBottom: 26 }}>{title}</h1>
@@ -39,6 +41,7 @@ export const HeroDeskComponent = ({
             ghost={true}
             href=""
             label={label}
+            onClick={onClick}
           />
         </div>
       </Col>

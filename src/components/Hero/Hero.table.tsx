@@ -6,9 +6,15 @@ interface ComponentProps {
   title?: string;
   src?: string;
   label?: string;
+  onClick?: () => void;
 }
 
-export const HeroTableComponent = ({ title, src, label }: ComponentProps) => {
+export const HeroTableComponent = ({
+  title,
+  src,
+  label,
+  onClick,
+}: ComponentProps) => {
   const adStr = (
     <h1
       style={{
@@ -51,6 +57,7 @@ export const HeroTableComponent = ({ title, src, label }: ComponentProps) => {
             ghost={true}
             href=""
             label={label}
+            onClick={onClick}
           />
         </div>
       </Col>

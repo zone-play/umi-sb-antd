@@ -14,7 +14,7 @@ interface ButtonProps {
   icon?: any; //ReactNode
   target?: string;
   label?: string;
-  onClick?: () => void;
+  onClick?: (event: any) => void;
 }
 
 export const ButtonComponent = ({
@@ -30,6 +30,7 @@ export const ButtonComponent = ({
   href,
   target,
   label,
+  onClick,
   ...props
 }: ButtonProps) => {
   return (
@@ -42,9 +43,10 @@ export const ButtonComponent = ({
       block={block}
       danger={danger}
       ghost={ghost}
-      href={href}
+      // href={href}
       icon={icon}
       target={target}
+      onClick={onClick}
       {...props}
     >
       {label}
