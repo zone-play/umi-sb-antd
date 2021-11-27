@@ -1,19 +1,10 @@
-import React, { useState } from 'react';
 import { LogoComponent } from '../Logo';
-import { SearchComponent } from '../Search';
 import { Drawer } from 'antd';
 import { MenuOutlined, SearchOutlined } from '@ant-design/icons';
+import useNavBarModel from '../../hooks/useNavBar';
 
 export const NavBarComponent = () => {
-  const [visible, setVisible] = useState(false);
-
-  const showDrawer = () => {
-    setVisible(true);
-  };
-
-  const onClose = () => {
-    setVisible(false);
-  };
+  const { visible, showDrawer, onClose } = useNavBarModel();
 
   const renderDrawer = (
     <Drawer

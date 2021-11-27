@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, ReactNode } from 'react';
 import { Row, Col } from 'antd';
 import { LogoComponent } from '../Logo';
 import { CloseOutlined, MenuOutlined, SearchOutlined } from '@ant-design/icons';
-import { ReactNode } from '@umijs/renderer-react/node_modules/@types/react';
-
+import useMenuModel from '../../hooks/useMenu';
 interface ComponentProps {
   menu?: ReactNode;
   menuSub?: ReactNode;
@@ -11,22 +10,7 @@ interface ComponentProps {
 }
 
 export const Header = ({ menu, menuSub, search }: ComponentProps) => {
-  const [visibleM, setVisibleM] = useState(false);
-  const [visibleS, setVisibleS] = useState(false);
-
-  function menuHandler() {
-    setVisibleM(visibleM ? false : true);
-    if (visibleS) {
-      setVisibleS(false);
-    }
-  }
-
-  function searchHandler() {
-    setVisibleS(visibleS ? false : true);
-    if (visibleM) {
-      setVisibleM(false);
-    }
-  }
+  const { visibleM, visibleS, menuHandler, searchHandler } = useMenuModel();
 
   return (
     <div
